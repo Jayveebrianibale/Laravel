@@ -20,18 +20,15 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 
  
-// Route::post('/greeting', function () {
-//     return 'Hello Im Izumi';
-// });
+Route::post('/greeting', function () {
+    return 'Hello Im Izumi';
+});
 
-// Route::match(['match','get', 'post'], '/updateUserInfo', function () {
+// Route::get(['match','get', 'post'], '/', function () {
 //     return 'jireh pogi';
 // });
  
 // Route::any('/', function () {
 //     // ...
 // });
-Route::get('/users', function (Request $request) {
-    return $request->name .'' . $request->email;
-});
 
