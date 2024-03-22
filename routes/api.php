@@ -19,19 +19,28 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 
- 
-// Route::post('/greeting', function () {
-//     return 'Hello Im Izumi';
-// });
+// Get Method
+Route::get('/get', function () {
+    return 'This is my name Izumi';
+});
 
-// Route::match(['match','get', 'post'], '/updateUserInfo', function () {
-//     return 'jireh pogi';
-// });
- 
-// Route::any('/', function () {
-//     // ...
-// });
-Route::get('/users', function (Request $request) {
-    return $request->name .'' . $request->email;
+// Post Method
+Route::post('/post', function () {
+    return 'This is my POST name Izumi';
+});
+
+// Put Method
+Route::put('/put/{id}', function () {
+    return 'This is my PUT name Izumi';
+});
+
+// Patch Method
+Route::patch('/putv2/{id}', function () {
+    return 'This is my PATCH name Izumi';
+});
+
+// Delete Method
+Route::delete('/delete/{id}', function () {
+    return 'This is my DELETE name Izumi';
 });
 
