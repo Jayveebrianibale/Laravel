@@ -3,6 +3,15 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\TestController;
+
+Route::get('/test', [TestController::class, 'getTest'])->middleware('token.check');
+Route::post('/test', [TestController::class, 'postTest'])->middleware('token.check');
+Route::put('/test', [TestController::class, 'putTest'])->middleware('token.check');
+Route::patch('/test', [TestController::class, 'patchTest'])->middleware('token.check');
+Route::delete('/test', [TestController::class, 'deleteTest'])->middleware('token.check');
+
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
