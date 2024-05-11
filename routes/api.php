@@ -23,33 +23,35 @@ Route::delete('/test', [TestController::class, 'deleteTest'])->middleware('token
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
+// Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
+//     return $request->user();
+// });
 
 
-// Get Method
-Route::get('/get', function () {
-    return 'This is my name Izumi';
-});
+// // Get Method
+// Route::get('/get', function () {
+//     return 'This is my name Izumi';
+// });
 
-// Post Method
-Route::post('/post', function () {
-    return 'This is my POST name Izumi';
-});
+// // Post Method
+// Route::post('/post', function () {
+//     return 'This is my POST name Izumi';
+// });
 
-// Put Method
-Route::put('/put/{id}', function () {
-    return 'This is my PUT name Izumi';
-});
+// // Put Method
+// Route::put('/put/{id}', function () {
+//     return 'This is my PUT name Izumi';
+// });
 
-// Patch Method
-Route::patch('/putv2/{id}', function () {
-    return 'This is my PATCH name Izumi';
-});
+// // Patch Method
+// Route::patch('/putv2/{id}', function () {
+//     return 'This is my PATCH name Izumi';
+// });
 
-// Delete Method
-Route::delete('/delete/{id}', function () {
-    return 'This is my DELETE name Izumi';
-});
+// // Delete Method
+// Route::delete('/delete/{id}', function () {
+//     return 'This is my DELETE name Izumi';
+// });
+
+Route::apiResource('products', ProductController::class);
 
